@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bat-Grievance Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a0033, #000033);
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .side-image {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .left-img { order: 1; }
+    .content { order: 2; text-align: center; }
+    .right-img { order: 3; }
+    #popup, #response {
+      background-color: #220033;
+      border: 2px solid #9900cc;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #660066;
+      max-width: 90%;
+    }
+    input, button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 80%;
+      border-radius: 10px;
+      border: none;
+      font-size: 1em;
+    }
+    button {
+      background-color: #9900cc;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #cc00ff;
+    }
+    img {
+      margin-top: 15px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #333;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Input Slide -->
+  <div class="container" id="inputSlide">
+    <img src="WhatsApp Image 2025-05-17 at 22.03.05_4767c73a" alt="left themed image" />
+    <div class="content">
+      <h1>Troubled again my parent?</h1>
+      <label for="grievance">lets not yell:</label>
+      <input type="text" id="grievance" placeholder="share your grievances dear parent" />
+      <button onclick="showResponse()">Submit</button>
+    </div>
+    <img src="WhatsApp Image 2025-05-17 at 22.03.05_e623bc54" class="side-image right-img" alt="right themed image" />
+  </div>
+
+  <!-- Response Slide -->
+  <div id="response" class="hidden">
+    <img src="WhatsApp Image 2025-05-17 at 22.03.06_423abf19" alt="Catwoman" />
+    <p>Sorry for the inconvenience, might happen again, await your next visit here. &lt;3</p>
+    <!-- Uncomment below to show the user's input -->
+    <!-- <p>Your sorrow: <span id="userGrievance"></span></p> -->
+  </div>
+
+  <script>
+    function showResponse() {
+      // Optionally, get the user's input and display it
+      // const grievance = document.getElementById('grievance').value;
+      // document.getElementById('userGrievance').textContent = grievance;
+
+      document.getElementById('inputSlide').classList.add('hidden');
+      document.getElementById('response').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
